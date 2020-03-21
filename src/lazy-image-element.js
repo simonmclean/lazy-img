@@ -4,7 +4,7 @@ class LazyImage extends LitElement {
     static get styles() {
         // Minimum dimensions needed for IntersectionObserver to work
         return css`
-            ::slotted(img) { min-height: 1px; min-width: 1px; }
+            :host { min-height: 1px; min-width: 1px; }
         `;
     }
 
@@ -22,6 +22,9 @@ class LazyImage extends LitElement {
         this.intersected = false;
         this.tolerance = '0px 0px 0px 0px';
         this.canUseLazyAttr = 'loading' in HTMLImageElement.prototype;
+    }
+
+    firstUpdated() {
         if (!this.canUseLazyAttr) {
             this.setupIntersectionObserver();
         }
@@ -36,7 +39,7 @@ class LazyImage extends LitElement {
     }
 
     getImage() {
-        return this.children[0];
+        return this.firstElementChild;
     }
 
     setImageSrc(value) {
@@ -50,7 +53,7 @@ class LazyImage extends LitElement {
         new IntersectionObserver(
             this.intersectionObserverCallback.bind(this),
             config,
-        ).observe(this.getImage());
+        ).observe(this);
     }
 
     intersectionObserverCallback(entries, observer) {

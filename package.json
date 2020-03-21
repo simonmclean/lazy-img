@@ -5,7 +5,7 @@
     "main": "dist/lazy-image-element.js",
     "scripts": {
         "dev": "polymer serve",
-        "build": "./node_modules/.bin/babel src --out-dir dist"
+        "build": "npx webpack"
     },
     "keywords": [],
     "author": "Simon McLean",
