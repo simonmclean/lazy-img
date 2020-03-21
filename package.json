@@ -1,0 +1,16 @@
+{
+  "name": "lazy-image",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "dev": "polymer serve",
+      "build": "polymer build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lit-element": "^2.3.1"
+  }
+}
