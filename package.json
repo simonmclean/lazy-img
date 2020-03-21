@@ -1,16 +1,23 @@
 {
-  "name": "lazy-image",
-  "version": "1.0.0",
-  "description": "Web component wrapper for lazy loading images",
-  "main": "dist/lazy-image-element.js",
-  "scripts": {
-      "dev": "polymer serve",
-      "build": "./node_modules/.bin/babel src --out-dir dist"
-  },
-  "keywords": [],
-  "author": "Simon McLean",
-  "license": "ISC",
-  "dependencies": {
-      "lit-element": "^2.3.1"
-  }
+    "name": "lazy-image",
+    "version": "0.1.0",
+    "description": "Web component wrapper for lazy loading images",
+    "main": "dist/lazy-image-element.js",
+    "scripts": {
+        "dev": "polymer serve",
+        "build": "./node_modules/.bin/babel src --out-dir dist"
+    },
+    "keywords": [],
+    "author": "Simon McLean",
+    "license": "ISC",
+    "dependencies": {
+        "lit-element": "^2.3.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/preset-env": "^7.9.0",
+        "babel-loader": "^8.1.0",
+        "webpack": "^4.42.0",
+        "webpack-cli": "^3.3.11"
+    }
 }
