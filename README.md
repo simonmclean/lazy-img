@@ -7,11 +7,14 @@ Leverages the `loading="lazy"` attribute for browsers that support it, falling b
 ## Usage
 
 ```html
+<script type="module" src="path/to/lazy-image-element.js"></script>
+
 <lazy-img src="path/to/image.extension">
     <img loading="lazy" alt="foo"/>
 </lazy-img>
 ```
 
+- Load the script from the `dist` folder
 - Apply `src` to the `lazy-img`, not the `img`
 - Set `loading="lazy"` on the `img`
 
