@@ -25,5 +25,6 @@ Anything that [supports IntersectionObserver](https://caniuse.com/#feat=intersec
 
 ```
 npm install -g polymer-cli
-polymer serve
+npm run dev
+npm run build
 ```

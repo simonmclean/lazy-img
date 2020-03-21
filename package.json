@@ -2,10 +2,10 @@
   "name": "lazy-image",
   "version": "1.0.0",
   "description": "Web component wrapper for lazy loading images",
-  "main": "src/lazy-image-element.js",
+  "main": "dist/lazy-image-element.js",
   "scripts": {
       "dev": "polymer serve",
-      "build": "polymer build"
+      "build": "./node_modules/.bin/babel src --out-dir dist"
   },
   "keywords": [],
   "author": "Simon McLean",
