@@ -27,7 +27,7 @@ Leverages the `loading="lazy"` attribute for browsers that support it, falling b
 ```
 
 The `tolerance` attribute will be passed to the `IntersectionObserver` config as the [`rootMargin` option](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin).
-A value of `"1000px"` means that the image will be loaded when the image is 1000px away from being in the viewport.
+A value of `"1000px"` means that, instead of loading the image when the first pixel enters the viewport, it will be loaded when it is within 1000px of the viewport.
 
 Only applies to browsers that use the `IntersectionObserver` fallback.
 
