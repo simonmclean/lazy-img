@@ -9,7 +9,7 @@ Leverages the `loading="lazy"` attribute for browsers that support it, falling b
 ```html
 <script type="module" src="path/to/lazy-image-element.js"></script>
 
-<lazy-img src="path/to/image.extension">
+<lazy-img src="path/to/image.jpg">
     <img loading="lazy" alt="foo"/>
 </lazy-img>
 ```
@@ -17,6 +17,19 @@ Leverages the `loading="lazy"` attribute for browsers that support it, falling b
 - Load the script from the `dist` folder
 - Apply `src` to the `lazy-img`, not the `img`
 - Set `loading="lazy"` on the `img`
+
+### Tolerance attribute
+
+```html
+<lazy-img src="path/to/image.jpg" tolerance="1000px">
+    <img loading="lazy" alt="foo"/>
+</lazy-img>
+```
+
+The `tolerance` attribute will be passed to the `IntersectionObserver` config as the [`rootMargin` option](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin).
+A value of `"1000px"` means that the image will be loaded when the image is 1000px away from being in the viewport.
+
+Only applies to browsers that use the `IntersectionObserver` fallback.
 
 ## Browser Support
 

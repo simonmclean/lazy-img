@@ -1,19 +1,12 @@
 import { LitElement, html, css } from 'lit-element';
 
 class LazyImage extends LitElement {
-    static get styles() {
-        // Minimum dimensions needed for IntersectionObserver to work
-        return css`
-            :host { min-height: 1px; min-width: 1px; }
-        `;
-    }
-
     static get properties() {
         return {
             src: { type: String, reflect: true },
             canUseLazyAttr: { type: Boolean },
             intersected: { type: Boolean },
-            tolerance: { type: String }, // rootMargin for IntersectionObserver
+            tolerance: { type: String },
         }
     }
 
